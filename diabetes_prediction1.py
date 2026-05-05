@@ -26,7 +26,8 @@ df.fillna(df.mean(), inplace=True)
 # Features & target
 X = df.drop("Outcome", axis=1)
 y = df["Outcome"]
-
+print(X.head())
+print(y.tail())
 # Split
 X_train, X_test, y_train, y_test = train_test_split(
     X, y, test_size=0.2, random_state=42
